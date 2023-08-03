@@ -690,9 +690,10 @@ section .container {
   border: 2px solid #18d26e;
 }
 
+/* Services
 /*--------------------------------------------------------------
 # Services
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .services .icon-box {
   text-align: center;
   background: rgba(204, 204, 204, 0.1);
@@ -769,12 +770,19 @@ section .container {
 .services .icon-box:hover p {
   color: #fff;
 }
+*/
 
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+  filter: grayscale(100%); /* Start in black and white */
+  transition: filter 0.5s ease; /* Color change transition on page load and hover */
+}
+
+.portfolio-item:hover {
+  filter: grayscale(0%); /* Return to full color on hover */
 }
 
 .portfolio #portfolio-flters {
@@ -831,6 +839,7 @@ section .container {
   opacity: 0;
 }
 
+/*texts about project on hover*/
 .portfolio .portfolio-wrap .portfolio-info {
   opacity: 0;
   position: absolute;
@@ -847,6 +856,7 @@ section .container {
   align-items: center;
 }
 
+/*Top left angle*/
 .portfolio .portfolio-wrap .portfolio-info::before {
   display: block;
   content: "";
@@ -861,6 +871,7 @@ section .container {
   z-index: 9994;
 }
 
+/*Bottom right angle*/
 .portfolio .portfolio-wrap .portfolio-info::after {
   display: block;
   content: "";
@@ -875,12 +886,14 @@ section .container {
   z-index: 9994;
 }
 
+/*Project name*/
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
 }
 
+/*Project category*/
 .portfolio .portfolio-wrap .portfolio-info p {
   color: #ffffff;
   font-size: 14px;
@@ -889,11 +902,13 @@ section .container {
   margin: 0;
 }
 
+/*Icons on project hover*/
 .portfolio .portfolio-wrap .portfolio-links {
   text-align: center;
   z-index: 4;
 }
 
+/*Same as before????*/
 .portfolio .portfolio-wrap .portfolio-links a {
   color: #fff;
   margin: 0 2px;
@@ -906,12 +921,30 @@ section .container {
   color: #63eda3;
 }
 
+/*Balck box that grows over the project on hover*/
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: radial-gradient(
+    ellipse farthest-corner,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.8) 25%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  opacity: 0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
 .portfolio .portfolio-wrap:hover::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
+  opacity: 1; /* Fully visible on hover */
 }
 
 .portfolio .portfolio-wrap:hover .portfolio-info {
@@ -927,6 +960,7 @@ section .container {
   bottom: 15px;
   right: 15px;
 }
+
 
 /*--------------------------------------------------------------
 # Portfolio Details
@@ -1007,6 +1041,7 @@ section .container {
   color: #444444;
   padding: 20px;
   width: 100%;
+  height: 100px;
   background: rgba(255, 255, 255, 0.08);
 }
 
