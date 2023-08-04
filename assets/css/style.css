@@ -1205,6 +1205,7 @@ section .container {
   font-size: 13px;
   color: #fff;
   z-index: 999999;
+  opacity: 0;
 }
 
 @media (max-width: 992px) {
@@ -1224,3 +1225,7 @@ section .container {
   color: #fff;
 }
 
+.email-pos-fix {
+  position: relative;
+  top: -10px;
+}
