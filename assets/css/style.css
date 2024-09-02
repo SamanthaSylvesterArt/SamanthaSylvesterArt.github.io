@@ -986,10 +986,37 @@ section .container {
   bottom: 0;
   overflow-y: auto;
 }
-
+.swiper-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  flex: 1; /* Allows the container to grow and shrink with the window */
+  display: flex;
+  justify-content: center; /* Centers the image within the container */
+  align-items: center;
+}
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  flex: 1; /* Allows the container to grow and shrink with the window */
+  display: flex;
+  justify-content: center; /* Centers the image within the container */
+  align-items: center;
+}
+.image-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto new lines if needed */
+  gap: 10px; /* Adds space between images */
+}
 .portfolio-details .container {
-  padding-top: 20px;
-  padding-bottom: 40px;
+
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .portfolio-details .portfolio-title {
@@ -1000,12 +1027,14 @@ section .container {
 
 .portfolio-details .portfolio-info {
   padding-top: 45px;
+  
 }
 
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 20px;
+ 
 }
 
 .portfolio-details .portfolio-info ul {
